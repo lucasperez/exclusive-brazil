@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:decorate template="template.xhtml">
+        <ui:define name="content">
+        	<br /><br />
+           <p:dataTable id="tabela" var="hotel" value="#{testeController.list}">
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="Id"/>
+                            </f:facet>
+                            <h:outputText value="#{hotel.id}" />
+                        </p:column>
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="Nome"/>
+                            </f:facet>
+                            <h:outputText value="#{hotel.name}"/>
+                        </p:column>
+             </p:dataTable>
+        </ui:define>
+    </ui:decorate>
+</html>

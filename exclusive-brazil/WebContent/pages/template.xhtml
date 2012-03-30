@@ -1,0 +1,74 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Exclusive Brazil</title>
+        <style type="text/css">
+            body {font-size: 12px
+            }
+           
+           .ui-layout-north {
+				z-index:20 !important;
+				overflow:visible;
+			}
+			
+			.ui-layout-north .ui-layout-unit-content {
+				overflow:visible;
+			}
+			
+        </style> 
+    </h:head>
+    <h:body>
+		<p:layout fullPage="true">
+		
+			<p:layoutUnit position="north" size="113">
+				<div class="ui-widget ui-widget-header">
+		        	<h:graphicImage url="../img/logo.png" width="200" />
+					<br /><br />					
+					<h:form>
+							<p:menubar styleClass="menu">
+						        <p:submenu label="Hoteis" icon="ui-icon-document" styleClass="menu">
+						            <p:menuitem value="Cadastro" url="#" />
+						            <p:menuitem value="Facilidades" url="#" />
+						            <p:menuitem value="Cadastro" url="#" />
+						            <p:separator />
+						            <p:menuitem value="Logout" url="#" />
+						        </p:submenu>
+						        <p:submenu label="Destinos"	 icon="ui-icon-document">
+						            <p:menuitem value="Cadastro" url="#" />
+						            <p:menuitem value="Cidade" url="#" />
+						            <p:menuitem value="Estado" url="#" />
+						            <p:menuitem value="Bairro" url="#" />
+						            <p:menuitem value="País" url="#" />
+						        </p:submenu>
+						        <p:submenu label="Serviços"	 icon="ui-icon-document">
+						            <p:menuitem value="Cadastro" url="#" />
+						            <p:menuitem value="Fornecedor" url="#" />
+						        </p:submenu>
+							</p:menubar>
+						</h:form>
+				</div>
+		    </p:layoutUnit>
+		
+		    <p:layoutUnit position="center" style="border:0px; margin:0px;">
+					<ui:insert name="content">
+						MIOLO A SER SUBSTITUIDO POR CADA PARTE DO SISTEMA
+					</ui:insert>	
+					
+				<p:dock>  
+				    <p:menuitem label="Finder" icon="/images/macosx/finder.png" url="#" />  
+				    <p:menuitem label="Terminal" icon="/images/macosx/terminal.png" url="#" onclick="terminal.show();term.focus();"/>  
+				    <p:menuitem label="Safari" icon="/images/macosx/safari.png" url="#" />  
+				    <p:menuitem label="iTunes" icon="/images/macosx/itunes.png" url="#"/>  
+				    <p:menuitem label="iChat" icon="/images/macosx/ichat.png" url="#"/>  
+				    <p:menuitem label="Trash" icon="/images/macosx/trash.png" url="#"/>  
+				</p:dock>  
+		    </p:layoutUnit>
+		
+		</p:layout>
+    </h:body>
+</html>
