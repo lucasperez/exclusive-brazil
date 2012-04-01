@@ -10,5 +10,6 @@
 	<classpathentry kind="lib" path="lib/javassist-3.15.0-GA.jar"/>
 	<classpathentry kind="lib" path="lib/jboss-logging-3.1.0.GA.jar"/>
 	<classpathentry kind="lib" path="lib/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Projetos/ExclusiveBrazil/Workspace/exclusive-brazil/exclusive-brazil-model/lib/postgresql-9.1-901.jdbc4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
