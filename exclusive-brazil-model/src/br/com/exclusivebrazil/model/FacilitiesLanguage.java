@@ -1,6 +1,5 @@
 package br.com.exclusivebrazil.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -8,22 +7,21 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="destination_language")
-public class DestinationLanguage implements Model {
+@Table(name="facilities_language")
+public class FacilitiesLanguage implements Model {
 	
 	@Id
 	private Long id;
 	
 	@ManyToOne
-	@JoinColumn(name="destination_id")
-	private Destination destination;
+	@JoinColumn(name="facilities_id")
+	private Facilities facilities;
 	
 	@ManyToOne
 	@JoinColumn(name="language_id")
 	private Language language;
 	
-	@Column(columnDefinition="text")
-	private String description;
+	private String name;
 
 	
 	public Long getId() {
@@ -34,12 +32,12 @@ public class DestinationLanguage implements Model {
 		this.id = id;
 	}
 
-	public Destination getDestination() {
-		return destination;
+	public Facilities getFacilities() {
+		return facilities;
 	}
 
-	public void setDestination(Destination destination) {
-		this.destination = destination;
+	public void setFacilities(Facilities facilities) {
+		this.facilities = facilities;
 	}
 
 	public Language getLanguage() {
@@ -50,12 +48,12 @@ public class DestinationLanguage implements Model {
 		this.language = language;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getName() {
+		return name;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setName(String name) {
+		this.name = name;
 	}
-	
+
 }

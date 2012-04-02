@@ -8,19 +8,21 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="destination_language")
-public class DestinationLanguage implements Model {
+@Table(name="service_language")
+public class ServiceLanguage implements Model {
 	
 	@Id
 	private Long id;
 	
 	@ManyToOne
-	@JoinColumn(name="destination_id")
-	private Destination destination;
+	@JoinColumn(name="service_id")
+	private Service service;
 	
 	@ManyToOne
 	@JoinColumn(name="language_id")
 	private Language language;
+	
+	private String name;
 	
 	@Column(columnDefinition="text")
 	private String description;
@@ -34,12 +36,12 @@ public class DestinationLanguage implements Model {
 		this.id = id;
 	}
 
-	public Destination getDestination() {
-		return destination;
+	public Service getService() {
+		return service;
 	}
 
-	public void setDestination(Destination destination) {
-		this.destination = destination;
+	public void setService(Service service) {
+		this.service = service;
 	}
 
 	public Language getLanguage() {
@@ -48,6 +50,14 @@ public class DestinationLanguage implements Model {
 
 	public void setLanguage(Language language) {
 		this.language = language;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getDescription() {
