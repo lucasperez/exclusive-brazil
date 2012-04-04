@@ -15,7 +15,7 @@
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context-3.0.xsd
 		http://www.springframework.org/schema/tx
-		http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
 		http://www.springframework.org/schema/aop
 		http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
 		http://www.springframework.org/schema/mvc
@@ -25,20 +25,19 @@
 
 	<context:component-scan base-package="br.com.exclusivebrazil.*"/>
 
-	<!--<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="configLocations">
 			<value>classpath*:hibernate.cfg.xml</value>
 		</property>
-		<property name="configurationClass"><value>org.hibernate.cfg.AnnotationConfiguration</value></property>
 	</bean>
 
-	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
-		<property name="sessionFactory" ref="sessionFactory" />
-	</bean> -->
-
+	<!-- <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+ -->
 	<mvc:annotation-driven/>
-
-	<!-- <tx:annotation-driven /> -->
+	
+ 	<!-- <tx:annotation-driven /> -->
 
 	<context:annotation-config />
 

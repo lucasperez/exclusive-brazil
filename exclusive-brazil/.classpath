@@ -2,21 +2,64 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="/exclusive-brazil-model/bin"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
 		<attributes>
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/exclusive-brazil-model/lib/antlr-2.7.7.jar"/>
-	<classpathentry kind="lib" path="/exclusive-brazil-model/lib/dom4j-1.6.1.jar"/>
-	<classpathentry kind="lib" path="/exclusive-brazil-model/lib/hibernate-commons-annotations-4.0.1.Final.jar"/>
-	<classpathentry kind="lib" path="/exclusive-brazil-model/lib/hibernate-core-4.1.1.Final.jar"/>
-	<classpathentry kind="lib" path="/exclusive-brazil-model/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
-	<classpathentry kind="lib" path="/exclusive-brazil-model/lib/javassist-3.15.0-GA.jar"/>
-	<classpathentry kind="lib" path="/exclusive-brazil-model/lib/jboss-logging-3.1.0.GA.jar"/>
-	<classpathentry kind="lib" path="/exclusive-brazil-model/lib/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
-	<classpathentry kind="lib" path="/exclusive-brazil-model/lib/postgresql-9.1-901.jdbc4.jar"/>
+	<classpathentry kind="lib" path="/exclusive-brazil-model/lib/antlr-2.7.7.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/exclusive-brazil-model/lib/dom4j-1.6.1.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/exclusive-brazil-model/lib/hibernate-commons-annotations-4.0.1.Final.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/exclusive-brazil-model/lib/hibernate-core-4.1.1.Final.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/exclusive-brazil-model/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/exclusive-brazil-model/lib/javassist-3.15.0-GA.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/exclusive-brazil-model/lib/jboss-logging-3.1.0.GA.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/exclusive-brazil-model/lib/jboss-transaction-api_1.1_spec-1.0.0.Final.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/exclusive-brazil-model/lib/postgresql-9.1-901.jdbc4.jar">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/exclusive-brazil-model/bin">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/classes"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/exclusive-brazil-model/lib/c3p0-0.9.1.jar"/>
+	<classpathentry kind="lib" path="/exclusive-brazil-model/lib/hibernate-c3p0-4.1.1.Final.jar"/>
+	<classpathentry kind="lib" path="/exclusive-brazil-model/lib/hibernate-entitymanager-4.1.1.Final.jar"/>
 	<classpathentry kind="output" path="WebContent/WEB-INF/classes"/>
 </classpath>

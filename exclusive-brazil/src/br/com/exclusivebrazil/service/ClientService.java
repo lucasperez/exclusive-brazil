@@ -6,16 +6,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.exclusivebrazil.dao.GenericDao;
-import br.com.exclusivebrazil.model.Hotel;
+import br.com.exclusivebrazil.model.Client;
 
 
-@Service("hotelService")
-public class HotelService {
+@Service("clientService")
+public class ClientService {
 	
 	@Autowired
-	private GenericDao<Hotel> dao;
+	private GenericDao<Client> dao;
 	
-	public List<Hotel> listHotels() {
+	public List<Client> clientList() {
 		return this.dao.list();
 	}
 	

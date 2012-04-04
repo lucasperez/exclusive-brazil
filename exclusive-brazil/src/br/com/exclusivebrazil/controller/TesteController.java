@@ -9,8 +9,9 @@ import javax.faces.bean.ManagedProperty;
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 
+import br.com.exclusivebrazil.model.Client;
 import br.com.exclusivebrazil.model.Hotel;
-import br.com.exclusivebrazil.service.HotelService;
+import br.com.exclusivebrazil.service.ClientService;
 
 @ManagedBean
 @ApplicationScoped
@@ -18,22 +19,22 @@ public class TesteController implements Serializable{
 	
 	private static final long serialVersionUID = 4665978434689891248L;
 	
-	@ManagedProperty(name="service", value = "#{hotelService}")
-	private HotelService service;
+	@ManagedProperty(name="service", value = "#{clientService}")
+	private ClientService service;
 	private Hotel hotel;
-	private DataModel<Hotel> hotelList;
+	private DataModel<Client> clientsList;
 	
-	public DataModel<Hotel> getList() {
-		List<Hotel> lista = service.listHotels();
-		hotelList = new ListDataModel(lista);
-		return hotelList;
+	public DataModel<Client> getList() {
+		List<Client> list = service.clientList();
+		clientsList = new ListDataModel(list);
+		return clientsList;
 	}
 
-	public HotelService getService() {
+	public ClientService getService() {
 		return service;
 	}
 
-	public void setService(HotelService service) {
+	public void setService(ClientService service) {
 		this.service = service;
 	}
 
@@ -45,13 +46,15 @@ public class TesteController implements Serializable{
 		this.hotel = hotel;
 	}
 
-	public DataModel<Hotel> getHotelList() {
-		return hotelList;
+	public DataModel<Client> getClientsList() {
+		return clientsList;
 	}
 
-	public void setHotelList(DataModel<Hotel> hotelList) {
-		this.hotelList = hotelList;
+	public void setClientsList(DataModel<Client> clientsList) {
+		this.clientsList = clientsList;
 	}
+
+
 
 	
 	
