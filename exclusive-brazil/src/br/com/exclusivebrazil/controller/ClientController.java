@@ -35,7 +35,7 @@ public class ClientController implements Serializable{
 	}
 	
 	public String save() {
-		if (this.service.save(client)) {
+		if (this.service.save(client)!=null) {
 			FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Contato salvo",  null);
 			FacesContext.getCurrentInstance().getExternalContext().getFlash().setKeepMessages(true);
 			FacesContext.getCurrentInstance().addMessage(null, message);
