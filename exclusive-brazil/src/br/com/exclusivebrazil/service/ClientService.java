@@ -18,5 +18,13 @@ public class ClientService {
 	public List<Client> clientList() {
 		return this.dao.list();
 	}
+
+	public boolean save(Client client) {
+		return this.dao.save(client);
+	}
+
+	public boolean delete(Client client) {
+		return this.dao.delete(client);
+	}
 	
 }

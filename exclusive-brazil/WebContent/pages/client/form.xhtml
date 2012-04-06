@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+      
+    <h:body>  
+    <ui:decorate template="../template.xhtml">
+        <ui:define name="content">
+        <f:view contentType="text/html">
+        <br /><br />
+        
+        <center>
+		<h:form id="clientForm">
+				<p:panel id="panel" header="Cadastro de Clientes" style="width:500px;">
+	        		<p:messages id="messages" />
+	        		
+				 	<p:panelGrid columns="3">
+	    		 		<h:outputLabel value="Nome: " for="nome"/>
+	    		 			 <p:inputText id="nome" value="#{clientController.client.name}" required="true" label="Nome" requiredMessage="Campo nome é obrigatório"/>
+	    		 			 <p:message for="nome" /> 
+	     			</p:panelGrid>
+     			</p:panel>
+     			
+     			<p:commandButton id="save" value="Salvar" action="#{clientController.save}" update="clientForm,messages"/>
+     			
+         </h:form>
+         </center>
+         </f:view>
+        </ui:define>
+    </ui:decorate>
+</h:body>
+</html>

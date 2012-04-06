@@ -8,9 +8,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Exclusive Brazil</title>
         <style type="text/css">
-            body {font-size: 12px
+            body {font-size: 12px;
+            	font-family:verdana;
             }
            
+           table {
+           	font-size:12px;
+           }
            .ui-layout-north {
 				z-index:20 !important;
 				overflow:visible;
@@ -27,29 +31,50 @@
 		
 			<p:layoutUnit position="north" size="113">
 				<div class="ui-widget ui-widget-header">
-		        	<h:graphicImage url="../img/logo.png" width="200" />
+		        	<h:graphicImage url="/img/logo.png" width="200" />
 					<br /><br />					
-					<h:form>
+					<h:form prependId="false" id="menu">
 							<p:menubar styleClass="menu">
-						        <p:submenu label="Hoteis" icon="ui-icon-document" styleClass="menu">
-						            <p:menuitem value="Cadastro" url="#" />
-						            <p:menuitem value="Facilidades" url="#" />
-						            <p:menuitem value="Cadastro" url="#" />
-						            <p:separator />
-						            <p:menuitem value="Logout" url="#" />
-						        </p:submenu>
-						        <p:submenu label="Destinos"	 icon="ui-icon-document">
-						            <p:menuitem value="Cadastro" url="#" />
-						            <p:menuitem value="Cidade" url="#" />
-						            <p:menuitem value="Estado" url="#" />
-						            <p:menuitem value="Bairro" url="#" />
-						            <p:menuitem value="País" url="#" />
-						        </p:submenu>
-						        <p:submenu label="Serviços"	 icon="ui-icon-document">
-						            <p:menuitem value="Cadastro" url="#" />
-						            <p:menuitem value="Fornecedor" url="#" />
-						        </p:submenu>
-							</p:menubar>
+								<p:submenu label="Produtos" icon="ui-icon-document" styleClass="menu">
+							        <p:submenu label="Clientes" icon="ui-icon-document" styleClass="menu">
+						            	<p:menuitem value="Cadastro" action="#{clientController.prepareInsert}"  />
+						            	<p:menuitem value="Listagem" url="/pages/client/list.xhtml" />
+							        </p:submenu>
+						       		<p:submenu label="Destinos" icon="ui-icon-document" styleClass="menu">
+						            	<p:menuitem value="Cadastro" url="#" />
+						            	<p:menuitem value="Listagem" url="#" />
+							        </p:submenu>
+									<p:submenu label="Hoteis" icon="ui-icon-document" styleClass="menu">
+						            	<p:menuitem value="Cadastro" url="#" />
+						            	<p:menuitem value="Listagem" url="#" />
+							        </p:submenu>
+							        <p:submenu label="Serviços" icon="ui-icon-document" styleClass="menu">
+						            	<p:menuitem value="Cadastro" url="#" />
+						            	<p:menuitem value="Listagem" url="#" />
+							        </p:submenu>
+							        <p:submenu label="Usuários" icon="ui-icon-document" styleClass="menu">
+						            	<p:menuitem value="Cadastro" url="#" />
+						            	<p:menuitem value="Listagem" url="#" />
+							        </p:submenu>
+			 					</p:submenu>
+			 								
+			 					<p:submenu label="Operacional" icon="ui-icon-document" styleClass="menu">
+					            	<p:menuitem value="Reservas" url="#" />
+					            	<p:menuitem value="Voucher" url="#" />
+			 					</p:submenu>
+			 					
+			 					<p:submenu label="Financeiro" icon="ui-icon-document" styleClass="menu">
+					            	<p:menuitem value="Contas a Pagar" url="#" />
+					            	<p:menuitem value="Contas a Receber" url="#" />
+			 					</p:submenu>
+			 					
+			 					<p:submenu label="Relatórios" icon="ui-icon-document" styleClass="menu">
+					            	<p:menuitem value="LucFile" url="#" />
+					            	<p:menuitem value="RoomNights" url="#" />
+			 					</p:submenu>
+			 					
+			 					
+ 							</p:menubar>
 						</h:form>
 				</div>
 		    </p:layoutUnit>
@@ -60,12 +85,9 @@
 					</ui:insert>	
 					
 				<p:dock>  
-				    <p:menuitem label="Finder" icon="/images/macosx/finder.png" url="#" />  
-				    <p:menuitem label="Terminal" icon="/images/macosx/terminal.png" url="#" onclick="terminal.show();term.focus();"/>  
-				    <p:menuitem label="Safari" icon="/images/macosx/safari.png" url="#" />  
-				    <p:menuitem label="iTunes" icon="/images/macosx/itunes.png" url="#"/>  
-				    <p:menuitem label="iChat" icon="/images/macosx/ichat.png" url="#"/>  
-				    <p:menuitem label="Trash" icon="/images/macosx/trash.png" url="#"/>  
+				    <p:menuitem label="email" icon="/img/email.png" url="http://mail.exclusivebrazil.com.br" target="_blank" />  
+				    <p:menuitem label="docs" icon="/img/docs.png" url="http://docs.exclusivebrazil.com.br" target="_blank"/>  
+				    <p:menuitem label="calendar" icon="/img/calendar.png" url="http://agenda.exclusivebrazil.com.br" target="_blank" />  
 				</p:dock>  
 		    </p:layoutUnit>
 		

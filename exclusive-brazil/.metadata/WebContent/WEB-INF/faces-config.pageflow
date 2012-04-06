@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13328945919120" configfile="/exclusive-brazil/WebContent/WEB-INF/faces-config.xml"/>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13328945919120" configfile="/exclusive-brazil/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="pages/client/list.xhtml" id="pf13337134433349" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf133372041688714" inlinks="pf133371496264412" path="/pages/client/list.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/client/form.xhtml" id="pf133371344333411" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" outlinks="pf133371496264412" inlinks="pf133372041688714 pf133372057444915" path="/pages/client/form.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pages/index.xhtml" id="pf133372057444916" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf133372057444915" path="/pages/index.xhtml"/>
+  <links id="pf133371496264412" target="pf13337134433349" source="pf133371344333411" outcome="list" redirect="true"/>
+  <links id="pf133372041688714" target="pf133371344333411" source="pf13337134433349" outcome="form" redirect="true"/>
+  <links id="pf133372057444915" target="pf133371344333411" source="pf133372057444916" outcome="form" redirect="true"/>
+</pageflow:Pageflow>
