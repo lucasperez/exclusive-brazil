@@ -25,7 +25,17 @@
 		<property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
  -->
  		<mapping class="br.com.exclusivebrazil.model.Client" />
-
+		<mapping class="br.com.exclusivebrazil.model.Destination" />
+		<mapping class="br.com.exclusivebrazil.model.DestinationLanguage" />
+		<mapping class="br.com.exclusivebrazil.model.Facilities" />
+		<mapping class="br.com.exclusivebrazil.model.Hotel" />
+		<mapping class="br.com.exclusivebrazil.model.HotelLanguage" />
+		<mapping class="br.com.exclusivebrazil.model.Language" />
+		<mapping class="br.com.exclusivebrazil.model.Neighborhood" />
+		<mapping class="br.com.exclusivebrazil.model.State" />
+		<mapping class="br.com.exclusivebrazil.model.Country" />
+		<mapping class="br.com.exclusivebrazil.model.City" />
+		
 	</session-factory>
 
 </hibernate-configuration>

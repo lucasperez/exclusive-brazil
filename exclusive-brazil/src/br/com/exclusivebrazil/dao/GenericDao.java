@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import br.com.exclusivebrazil.model.Client;
 
 public class GenericDao<T> implements Dao<T> {
+	
 	@Autowired
 	private SessionFactory sessionFactory;
 	private Class persistentClass;
