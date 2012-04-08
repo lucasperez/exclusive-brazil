@@ -12,9 +12,7 @@ import javax.faces.event.ActionEvent;
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 
-import br.com.exclusivebrazil.model.Client;
 import br.com.exclusivebrazil.model.Destination;
-import br.com.exclusivebrazil.service.ClientService;
 import br.com.exclusivebrazil.service.DestinationService;
 
 @ManagedBean
@@ -26,13 +24,13 @@ public class DestinationController implements Serializable{
 	@ManagedProperty(name="service", value = "#{destinationService}")
 	private DestinationService service;
 	private Destination destination;
-	private DataModel<Destination> clientsList;
+	private DataModel<Destination> destinationsList;
 	
 	//Metodos de Negocio
 	public DataModel<Destination> getList() {
-		List<Destination> list = service.clientList();
-		clientsList = new ListDataModel(list);
-		return clientsList;
+		List<Destination> list = service.destinationList();
+		destinationsList = new ListDataModel<Destination>(list);
+		return destinationsList;
 	}
 	
 	public String save() {
@@ -51,7 +49,7 @@ public class DestinationController implements Serializable{
 	}
 
 	public void delete(ActionEvent event) {
-		this.destination = clientsList.getRowData();
+		this.destination = destinationsList.getRowData();
 		if (this.service.delete(destination)) {
 			FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Contato excluído",  null);
 			FacesContext.getCurrentInstance().getExternalContext().getFlash().setKeepMessages(true);
@@ -72,7 +70,7 @@ public class DestinationController implements Serializable{
 	}
 	
 	public String prepareUpdate() {
-		this.destination = clientsList.getRowData();
+		this.destination = destinationsList.getRowData();
 		return "form";
 	}
 
@@ -92,12 +90,12 @@ public class DestinationController implements Serializable{
 		this.destination = destination;
 	}
 
-	public DataModel<Destination> getClientsList() {
-		return clientsList;
+	public DataModel<Destination> getDestinationsList() {
+		return destinationsList;
 	}
 
-	public void setClientsList(DataModel<Destination> clientsList) {
-		this.clientsList = clientsList;
+	public void setDestinationsList(DataModel<Destination> destinationsList) {
+		this.destinationsList = destinationsList;
 	}
 	
 	

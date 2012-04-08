@@ -2,10 +2,9 @@ package br.com.exclusivebrazil.dao;
 
 import java.io.Serializable;
 import java.util.List;
+
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import br.com.exclusivebrazil.model.Client;
 
 public class GenericDao<T> implements Dao<T> {
 	
@@ -31,12 +30,12 @@ public class GenericDao<T> implements Dao<T> {
 
 	@Override
 	public T get(Serializable id) {
-		return (T) this.sessionFactory.getCurrentSession().get(getClass(), id);
+		return (T) this.sessionFactory.getCurrentSession().get(persistentClass, id);
 	}
 
 	@Override
 	public List<T> listAll() {
-		return this.sessionFactory.getCurrentSession().createCriteria(Client.class).list();
+		return this.sessionFactory.getCurrentSession().createCriteria(persistentClass).list();
 	}
 
 	@Override

@@ -41,8 +41,8 @@
 						            	<p:menuitem value="Listagem" url="/pages/client/list.xhtml" />
 							        </p:submenu>
 						       		<p:submenu label="Destinos" icon="ui-icon-document" styleClass="menu">
-						            	<p:menuitem value="Cadastro" url="#" />
-						            	<p:menuitem value="Listagem" url="#" />
+						            	<p:menuitem value="Cadastro" action="#{destinationController.prepareInsert}"  />
+						            	<p:menuitem value="Listagem" url="/pages/destination/list.xhtml" />
 							        </p:submenu>
 									<p:submenu label="Hoteis" icon="ui-icon-document" styleClass="menu">
 						            	<p:menuitem value="Cadastro" url="#" />
