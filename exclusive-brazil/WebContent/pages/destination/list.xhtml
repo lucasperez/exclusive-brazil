@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <ui:decorate template="../template.xhtml">
+        <ui:define name="content">
+        	<f:view contentType="text/html">
+        		<br /><br />
+		        <div style="padding:10px;">
+			        <h1 style="font-size:16px; color:#FF7F50;">Listagem de Destinations</h1>
+			        
+					<h:form prependId="false" id="destinationListForm">
+					   
+					   <p:growl id="messages"/>
+					   
+			           <p:dataTable id="dataTable" var="destination" value="#{destinationController.list}" resizableColumns="true" tableStyle="width:500px;">
+			           	
+							<p:column id="destinationIdHeader">
+								<f:facet name="header">
+									<h:outputText value="Id"/>
+								</f:facet>
+								<h:outputText value="#{destination.id}" />
+							</p:column>
+							
+							<p:column>
+								<f:facet name="header">
+									<h:outputText value="Nome"/>
+								</f:facet>
+								<h:outputText value="#{destination.name}"/>
+							</p:column>
+							
+							<p:column>
+								<f:facet name="header">
+									<h:outputText value="Ações"/>
+								</f:facet>
+								
+								<p:commandButton value="Alterar" image="ui-icon-pencil" id="updateButton" action="#{destinationController.prepareUpdate}"/>
+								<p:commandButton value="Excluir" image="ui-icon-trash"  id="deleteButton" actionListener="#{destinationController.delete}" update=":destinationListForm" />   
+							</p:column>
+			             </p:dataTable>
+			         </h:form>
+			    </div>
+         </f:view>
+        </ui:define>
+    </ui:decorate>
+</html>

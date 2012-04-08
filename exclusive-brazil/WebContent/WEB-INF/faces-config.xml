@@ -9,6 +9,21 @@
     	<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
 	</application>
 	
+	
+	<navigation-rule>
+		<from-view-id>/pages/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>form</from-outcome>
+			<to-view-id>/pages/client/form.xhtml</to-view-id>
+		<redirect />
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>form</from-outcome>
+			<to-view-id>/pages/destination/form.xhtml</to-view-id>
+		<redirect />
+		</navigation-case>
+	</navigation-rule>	
+	
 	<navigation-rule>
 		<from-view-id>/pages/client/list.xhtml</from-view-id>
 		<navigation-case>
@@ -28,12 +43,21 @@
 	</navigation-rule>
 	
 	<navigation-rule>
-		<from-view-id>/pages/index.xhtml</from-view-id>
+		<from-view-id>/pages/destination/list.xhtml</from-view-id>
 		<navigation-case>
 			<from-outcome>form</from-outcome>
 			<to-view-id>/pages/destination/form.xhtml</to-view-id>
 		<redirect />
 		</navigation-case>
 	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/pages/destination/form.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>list</from-outcome>
+			<to-view-id>/pages/destination/list.xhtml</to-view-id>
+		<redirect />
+		</navigation-case>
+	</navigation-rule>	
 	
 </faces-config>
